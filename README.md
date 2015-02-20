@@ -19,3 +19,9 @@ Getting started:
 ##### Launch app:
 
 Open file `index.html` in your browser.
+
+
+Development:
+---------------------
+
+Run `gulp watch` to watch your changes into the `js` folder.
