@@ -18,7 +18,7 @@ Getting started:
 
 ##### Launch app:
 
-Open file `index.html` in your browser.
+Open the file `index.html` into your browser.
 
 
 Development:
