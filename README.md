@@ -24,4 +24,4 @@ Open file `index.html` in your browser.
 Development:
 ---------------------
 
-Run `gulp watch` to watch your changes into the `js` folder.
+Run `gulp watch` to watch your changes made into the `js` folder.
