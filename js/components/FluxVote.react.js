@@ -31,9 +31,12 @@ var FluxVote = React.createClass({
 
     return (
       <section>
-        <input type="text" name="current-user" onChange={this.newCurrentUser} />
-        <p>Current user : <strong>{this.state.currentUser}</strong></p>
         <div>
+          <p>Please enter a username here: <input type="text" name="current-user" onChange={this.newCurrentUser} /></p>
+          <p>Current user: <strong>{this.state.currentUser}</strong></p>
+        </div>
+        <div>
+          <p>Submit your vote by clicking the 'vote' button:</p>
           <button onClick={this.newVote}>Vote</button> <strong>{counter}</strong>
         </div>
         <UserList allUsers={this.state.allUsers} />

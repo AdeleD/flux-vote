@@ -43,9 +43,12 @@ var FluxVote = React.createClass({displayName: "FluxVote",
 
     return (
       React.createElement("section", null, 
-        React.createElement("input", {type: "text", name: "current-user", onChange: this.newCurrentUser}), 
-        React.createElement("p", null, "Current user : ", React.createElement("strong", null, this.state.currentUser)), 
         React.createElement("div", null, 
+          React.createElement("p", null, "Please enter a username here: ", React.createElement("input", {type: "text", name: "current-user", onChange: this.newCurrentUser})), 
+          React.createElement("p", null, "Current user: ", React.createElement("strong", null, this.state.currentUser))
+        ), 
+        React.createElement("div", null, 
+          React.createElement("p", null, "Submit your vote by clicking the 'vote' button:"), 
           React.createElement("button", {onClick: this.newVote}, "Vote"), " ", React.createElement("strong", null, counter)
         ), 
         React.createElement(UserList, {allUsers: this.state.allUsers})
