@@ -5,8 +5,8 @@ var assign = require('object-assign');
 var _users = [];
 var _currentUser = '';
 
-var NEW_USER = 'new-user';
-var NEW_CURRENT_USER = '';
+var USER_LIST_CHANGE = 'user-list-change';
+var CURRENT_USER_CHANGE = 'current-user-change';
 
 var FluxVoteStore = assign({}, EventEmitter.prototype, {
   getAllUsers: function() {
@@ -18,27 +18,27 @@ var FluxVoteStore = assign({}, EventEmitter.prototype, {
   },
 
   emitUserListChange: function() {
-    this.emit(NEW_USER);
+    this.emit(USER_LIST_CHANGE);
   },
 
   addUserListChangeListener: function(callback) {
-    this.on(NEW_USER, callback);
+    this.on(USER_LIST_CHANGE, callback);
   },
 
   removeUserListChangeListener: function(callback) {
-    this.removeListener(NEW_USER, callback);
+    this.removeListener(USER_LIST_CHANGE, callback);
   },
 
   emitCurrentUserChange: function() {
-    this.emit(NEW_CURRENT_USER);
+    this.emit(CURRENT_USER_CHANGE);
   },
 
   addNewCurrentUserListener: function(callback) {
-    this.on(NEW_CURRENT_USER, callback);
+    this.on(CURRENT_USER_CHANGE, callback);
   },
 
   removeNewCurrentUserListener: function(callback) {
-    this.removeListener(NEW_CURRENT_USER, callback);
+    this.removeListener(CURRENT_USER_CHANGE, callback);
   },
 });
 

@@ -49,9 +49,15 @@ var FluxVote = React.createClass({
   },
 
   newVote: function(evt) {
+    var currentUser = this.state.currentUser;
+
+    if (!currentUser || !currentUser.name) {
+      currentUser = {name: 'Anonymous'}
+    }
+
     AppDispatcher.dispatch({
       eventName: 'new-user',
-      newUser: {name: (this.state.currentUser || 'Anonymous')}
+      newUser: currentUser
     });
   },
 
